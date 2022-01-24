@@ -41,6 +41,7 @@ test:
     - pip check
     - pytest -vvv --capture=tee-sys tests
   requires:
+    - {{ compiler('c') }}
     - cloudpickle >=1.4.0
     - dask
     - modin-ray
