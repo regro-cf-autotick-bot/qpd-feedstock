@@ -45,6 +45,7 @@ test:
     - dask
     - modin-ray
     - pandas >=1.1.2
+    - pandasql
     - pip
     - pytest    
 
