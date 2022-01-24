@@ -1,5 +1,5 @@
 {% set name = "qpd" %}
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qpd-{{ version }}.tar.gz
-  sha256: 431e8f6c13c6732f99b2a472d4b332685a5011826c33b64cf9960ca02a0afea9
+  sha256: 61aa2046363a94e9efdd97def76f11fa20f4a108c1c235d2700a5920b76bab4f
 
 build:
   number: 0
@@ -28,12 +28,27 @@ requirements:
     - triad
 
 test:
+  source_files:
+    - tests
   imports:
     - qpd
+    - qpd_dask
+    - qpd_pandas
+    - qpd_ray
+    - qpd_test
+    - qpd_version
   commands:
     - pip check
+    # Comment out test suite until ray issue resolved
+#     - pytest -vvv --capture=tee-sys tests
   requires:
+    - cloudpickle >=1.4.0
+    - dask
+    - modin-ray
+    - pandas >=1.1.2
+#     - pandasql
     - pip
+#     - pytest    
 
 about:
   home: https://pypi.org/project/qpd/
