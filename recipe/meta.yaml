@@ -41,13 +41,13 @@ test:
     - pip check
     - pytest -vvv --capture=tee-sys tests
   requires:
-    - {{ compiler('c') }}
     - cloudpickle >=1.4.0
     - dask
     - modin-ray
     - pandas >=1.1.2
     - pandasql
     - pip
+    - pyarrow
     - pytest    
 
 about:
