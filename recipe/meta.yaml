@@ -1,5 +1,5 @@
 {% set name = "qpd" %}
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qpd-{{ version }}.tar.gz
-  sha256: 61aa2046363a94e9efdd97def76f11fa20f4a108c1c235d2700a5920b76bab4f
+  sha256: e3921837e6c8c6deecb4c147093e50058b755a7ed7ce3ea3e14261a858f957ce
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - python >=3.6
   run:
     - adagio
-    - antlr4-python3-runtime
+    - antlr4-python3-runtime <4.10
     - pandas >=1.0.2
     - python >=3.6
     - sqlalchemy
