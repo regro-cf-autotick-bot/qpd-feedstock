@@ -21,7 +21,7 @@ requirements:
     - python >=3.6
   run:
     - adagio
-    - antlr4-python3-runtime
+    - antlr4-python3-runtime <4.10
     - pandas >=1.0.2
     - python >=3.6
     - sqlalchemy
