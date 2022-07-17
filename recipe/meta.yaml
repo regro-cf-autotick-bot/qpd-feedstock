@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.6,<3.9
   run:
     - adagio
     - antlr4-python3-runtime <4.10
     - pandas >=1.0.2
-    - python >=3.6
+    - python >=3.6,<3.9
     - sqlalchemy
     - triad
 
