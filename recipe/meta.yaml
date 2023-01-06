@@ -1,5 +1,5 @@
 {% set name = "qpd" %}
-{% set version = "0.3.4" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/qpd-{{ version }}.tar.gz
-  sha256: 310050dd6ee0fdde031d5464c440a22d9436943b42ea3336c93b5977f31354ab
+  sha256: 70e262130c71e8b4fd12c0e3b93030c9c19f949e2b1c3bd63025c43d03c6ef00
 
 build:
   number: 0
